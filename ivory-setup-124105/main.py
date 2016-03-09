@@ -18,8 +18,13 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        self.response.write('I love Izz Doggy!!!')
+
+class PageHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('This is page 2')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/page2',PageHandler)
 ], debug=True)
